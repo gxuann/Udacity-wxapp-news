@@ -22,4 +22,4 @@
     <image class="secendNewsImg" src="{{item.firstImage}}" mode="aspectFill"></image>
     <view class="secendNewsDate">{{item.date}}</view>
   </view>
-</view>
+</view> 

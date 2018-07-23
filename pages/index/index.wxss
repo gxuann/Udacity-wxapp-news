@@ -1,3 +1,6 @@
+page{
+  background-color: #51c1f0
+}
 .newsType {
   position: fixed;
   background-color: #51c1f0;
@@ -20,26 +23,28 @@
   flex-shrink: 0;
   text-align: center;
   color: #fff;
-  padding-bottom: 10rpx
 }
 
 .newsWrapper{
   top: 60rpx;
+  bottom: 0rpx;
   position: relative;
+  background-color: #fff
 }
 .topNews{
   height: 390rpx;
   position: relative;
 }
 .topNewsImgBg{
+  position: absolute;
   opacity: 0.1;
   width:100%; 
   height: 400rpx;
   z-index: -1
 }
 .topNewsImg{
-  position: relative;
-  top:-400rpx;
+  position: absolute;
+  top:10rpx;
   left: 5%;
   height: 380rpx;
   width: 90%;
@@ -52,11 +57,11 @@
   font-size: 30rpx;
   line-height: 42rpx;
   text-align: left;
-  margin-left: 11%;
-  margin-right: 11%;
-  top: -550rpx;
-  z-index: 21;
-  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  top: 230rpx;
+  z-index: 2;
+  position: absolute;
 }
 .topNewsDate{
   color: #fff;
@@ -64,20 +69,49 @@
   font-size: 30rpx;
   line-height: 42rpx;
   text-align: left;
-  margin-left: 11%;
-  margin-right: 11%;
-  top: -550rpx;
+  margin-left: 10%;
+  margin-right: 10%;
+  top: 310rpx;
   z-index: 2;
-  position: relative;
+  position: absolute;
 }
 .textBg{
   width:90%;
   height: 130rpx;
-  opacity:0.3;
+  opacity:0.45;
   background-color: #000;
   margin-left: 5%;
-  border-radius: 4rpx;
-  top: -680rpx;
-  position: relative;
+  top: 230rpx;
+  position: absolute;
   z-index: 1;
+}
+
+.secendNews{
+  position: relative;
+  height: 250rpx;
+  margin: 20rpx;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.secendNewsTitle{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  top: 35rpx;
+  left: 10rpx;
+  right: 40%;
+  position: absolute;
+}
+.secendNewsImg{
+  position: absolute;
+  right: 2%;
+  top: 35rpx;
+  width: 240rpx;
+  height: 180rpx;
+}
+.secendNewsDate{
+  font-size: 25rpx;
+  line-height: 35rpx;
+  left: 10rpx;
+  bottom: 35rpx;
+  position: absolute;
+  opacity: 0.7
 }

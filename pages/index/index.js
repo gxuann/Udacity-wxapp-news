@@ -19,6 +19,9 @@ Page({
   onLoad(){
     this.getNews();
   },
+  onPullDownRefresh() {
+    this.getNews();
+  },
   //点击新闻类别跳转并获取新闻列表
   selNewsType(e) {
     if (this.data.selectedNewsType == e.currentTarget.dataset.tp) {
@@ -55,12 +58,15 @@ Page({
           topNewsList: topList,
           secendNewsList: secendList
         })
+      },
+      complete: ()=>{
+        wx.stopPullDownRefresh()
       }
     })
   },
   addSource(result){
     for(var i=0; i<result.length; i++){
-      result[i].date = result[i].source + " " + result[i].date.slice(11,16)
+      result[i].date = result[i].source + "  "+ result[i].date.slice(0,10) +"  "+ result[i].date.slice(11,16)
     }
   }
 })
