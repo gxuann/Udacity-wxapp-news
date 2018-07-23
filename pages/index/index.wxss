@@ -1,28 +1,23 @@
-.temp{
-  text-align: center;
-  font-size: 200rpx;
-  line-height: 280rpx;
-  opacity: 0.8;
+.newsType {
+  position: fixed;
+  background-color: #51c1f0
 }
 
-.weather{
-  text-align: center;
-  font-size: 40rpx;
-  line-height: 56rpx;
-  opacity: 0.65;
-}
-
-.weather-wrapper{
-  position: relative;
-  padding-top: 174rpx;
-  padding-bottom: 250rpx;
-}
-
-.weather-bg{
-  position: absolute;
-  top: 0;
-  left: 0;
+.newsTypeList {
+  padding-left: 25rpx;
+  align-items: center;
   width: 100%;
-  height: 100%;
-  z-index: -1;
+  display: flex;
+  height: 52rpx;
 }
+
+.newsTypeText {
+  font-size: 35rpx;
+  line-height: 49rpx;
+  width: 100rpx;
+  flex-shrink: 0;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 10rpx
+}
+
