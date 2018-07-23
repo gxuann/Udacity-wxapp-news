@@ -1,6 +1,7 @@
 .newsType {
   position: fixed;
-  background-color: #51c1f0
+  background-color: #51c1f0;
+  border-bottom: 10rpx;
 }
 
 .newsTypeList {

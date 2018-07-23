@@ -1,7 +1,24 @@
 <scroll-view scroll-x class="newsType">
   <view class="newsTypeList">
-    <view class="newsTypeText" wx:for="{{newsTypeList}}" data-id="{{item.id}}" style='color:{{item.color}}' bindtap='selNewsType'>
+    <view class="newsTypeText" wx:for="{{newsTypeList}}" data-tp="{{item.tp}}" style='color:{{item.color}}' bindtap='selNewsType'>
       {{item.text}}
     </view>
   </view>
 </scroll-view>
+<view class="newsWrapper">
+  <view class="topNews">
+    <block wx:for="{{topNewsList}}">
+      <view class="tapNews" data-id="{{item.id}}">
+        <image class="topNewsImgBg" src='{{item.firstImage}}' mode="aspectFill"></image>
+        <image class="topNewsImg" src='{{item.firstImage}}' mode="aspectFill"></image>
+        <view class="topNewsTitle">{{item.title}}</view>
+        <view class="topNewsDate">{{item.date}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="secendNews">
+    <view class="secendNewsTitle"></view>
+    <image class="secendNewsImg" src="{{item.firstImage}}" mode="aspectFill"></image>
+    <view class="secendNewsDate">{{item.date}}</view>
+  </view>
+</view>
