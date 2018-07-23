@@ -17,7 +17,7 @@ Page({
     selectedNewsType:"gn"
   },
   onLoad(){
-
+    this.getNews();
   },
   //点击新闻类别跳转并获取新闻列表
   selNewsType(e) {
@@ -47,7 +47,7 @@ Page({
         let result = res.data.result;
         this.addSource(result);
         var topList = [] , secendList = [];
-        topList.push(result[1]);
+        topList.push(result[0]);
         for (var i = 1; i<result.length; i++){
           secendList.push(result[i]);
         }

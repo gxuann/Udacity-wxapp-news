@@ -13,11 +13,12 @@
         <image class="topNewsImg" src='{{item.firstImage}}' mode="aspectFill"></image>
         <view class="topNewsTitle">{{item.title}}</view>
         <view class="topNewsDate">{{item.date}}</view>
+        <view class="textBg"></view>
       </view>
     </block>
   </view>
-  <view class="secendNews">
-    <view class="secendNewsTitle"></view>
+  <view class="secendNews" wx:for="{{secendNewsList}}" data-id="{{item.id}}">
+    <view class="secendNewsTitle">{{item.title}}</view>
     <image class="secendNewsImg" src="{{item.firstImage}}" mode="aspectFill"></image>
     <view class="secendNewsDate">{{item.date}}</view>
   </view>
