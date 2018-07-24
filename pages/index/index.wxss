@@ -1,6 +1,3 @@
-page{
-  background-color: #51c1f0
-}
 .newsType {
   position: fixed;
   background-color: #51c1f0;
@@ -34,13 +31,6 @@ page{
 .topNews{
   height: 390rpx;
   position: relative;
-}
-.topNewsImgBg{
-  position: absolute;
-  opacity: 0.1;
-  width:100%; 
-  height: 400rpx;
-  z-index: -1
 }
 .topNewsImg{
   position: absolute;
@@ -81,11 +71,20 @@ page{
   opacity:0.45;
   background-color: #000;
   margin-left: 5%;
-  top: 230rpx;
+  top: 225rpx;
   position: absolute;
   z-index: 1;
 }
-
+.hot{
+  position: absolute;
+  color: white;
+  z-index: 1;
+  top:10rpx;
+  right: 5%;
+  background-color: red;
+  opacity: 0.4;
+  border-radius: 10rpx
+}
 .secendNews{
   position: relative;
   height: 250rpx;

@@ -17,10 +17,10 @@ Page({
     selectedNewsType:"gn"
   },
   onLoad(){
-    this.getNews();
+    this.getNewsList();
   },
   onPullDownRefresh() {
-    this.getNews();
+    this.getNewsList();
   },
   //点击新闻类别跳转并获取新闻列表
   selNewsType(e) {
@@ -38,9 +38,10 @@ Page({
       newsTypeList: this.data.newsTypeList,
       selectedNewsType: e.currentTarget.dataset.tp
     })
-    this.getNews(); //获取新闻列表
+    this.getNewsList(); 
   },
-  getNews(callback){
+  //获取新闻列表
+  getNewsList(){
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
       data: {
@@ -64,6 +65,13 @@ Page({
       }
     })
   },
+  tapNews(e){
+    wx.navigateTo({
+      url: '/pages/detail/detail?newsID=' + e.currentTarget.dataset.id
+    })
+    console.log(e.currentTarget.dataset.id)
+  },
+  //将新闻来源和时间拼接在一起，同时取出api返回的日期和时间
   addSource(result){
     for(var i=0; i<result.length; i++){
       result[i].date = result[i].source + "  "+ result[i].date.slice(0,10) +"  "+ result[i].date.slice(11,16)

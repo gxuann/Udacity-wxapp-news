@@ -8,16 +8,16 @@
 <view class="newsWrapper">
   <view class="topNews">
     <block wx:for="{{topNewsList}}">
-      <view class="tapNews" data-id="{{item.id}}">
-        <image class="topNewsImgBg" src='{{item.firstImage}}' mode="aspectFill"></image>
+      <view class="tapNews" data-id="{{item.id}}" bindtap="tapNews">
         <image class="topNewsImg" src='{{item.firstImage}}' mode="aspectFill"></image>
+        <view class="hot">热门</view>
         <view class="topNewsTitle">{{item.title}}</view>
         <view class="topNewsDate">{{item.date}}</view>
         <view class="textBg"></view>
       </view>
     </block>
   </view>
-  <view class="secendNews" wx:for="{{secendNewsList}}" data-id="{{item.id}}">
+  <view class="secendNews" wx:for="{{secendNewsList}}" data-id="{{item.id}}" bindtap="tapNews">
     <view class="secendNewsTitle">{{item.title}}</view>
     <image class="secendNewsImg" src="{{item.firstImage}}" mode="aspectFill"></image>
     <view class="secendNewsDate">{{item.date}}</view>

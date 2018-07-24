@@ -1,0 +1,41 @@
+.header{
+  position: relative;
+  height: 180rpx;
+  margin-top: 50rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.newsTitle{
+  position: absolute;
+  font-size: 40rpx;
+  line-height: 56rpx
+}
+.newsDate{
+  position: absolute;
+  top: 120rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  opacity: 0.7
+}
+
+.content{
+  position: relative;
+  top: 50rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.p{
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+.strong{
+  font-weight: bold;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+.image{
+  width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
