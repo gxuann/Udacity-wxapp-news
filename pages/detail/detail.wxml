@@ -1,11 +1,11 @@
 <view class="header">
   <view class="newsTitle">{{title}}</view>
-  <view class="newsDate">{{date}}</view>
+  <view class="newsDate">{{source}}</view>
 </view>
 
 
 <!-- 
-还没解决段首空两字符的问题，的开了decode属性，nbsp好像不是标准的段首空两字符
+还没解决段首空两字符的问题，打开了decode属性，nbsp好像不是标准的段首空两字符
 -->
 <view class="content" wx:for="{{contentList}}">
   <text class="p" wx:if="{{item.type === 'p'}}" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item.text}}</text>

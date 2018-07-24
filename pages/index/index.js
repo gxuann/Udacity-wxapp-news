@@ -71,10 +71,10 @@ Page({
     })
     console.log(e.currentTarget.dataset.id)
   },
-  //将新闻来源和时间拼接在一起，同时取出api返回的日期和时间
+  //将新闻来源和时间拼接在一起，通过JavaScript slice方法取出时间和日期
   addSource(result){
     for(var i=0; i<result.length; i++){
-      result[i].date = result[i].source + "  "+ result[i].date.slice(0,10) +"  "+ result[i].date.slice(11,16)
+      result[i].source = result[i].source + "  "+ result[i].date.slice(0,10) +"  "+ result[i].date.slice(11,16)
     }
   }
 })

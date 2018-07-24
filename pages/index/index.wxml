@@ -12,7 +12,7 @@
         <image class="topNewsImg" src='{{item.firstImage}}' mode="aspectFill"></image>
         <view class="hot">热门</view>
         <view class="topNewsTitle">{{item.title}}</view>
-        <view class="topNewsDate">{{item.date}}</view>
+        <view class="topNewsDate">{{item.source}}</view>
         <view class="textBg"></view>
       </view>
     </block>
@@ -20,6 +20,6 @@
   <view class="secendNews" wx:for="{{secendNewsList}}" data-id="{{item.id}}" bindtap="tapNews">
     <view class="secendNewsTitle">{{item.title}}</view>
     <image class="secendNewsImg" src="{{item.firstImage}}" mode="aspectFill"></image>
-    <view class="secendNewsDate">{{item.date}}</view>
+    <view class="secendNewsDate">{{item.source}}</view>
   </view>
 </view> 

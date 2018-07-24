@@ -21,7 +21,7 @@ Page({
         this.addSource(result)
         this.setData({
           title: result.title,
-          date: result.date,
+          source: result.source,
           contentList: result.content
         })
       },
@@ -31,6 +31,6 @@ Page({
     })
   },
   addSource(result) {
-    result.date = result.source + "  " + result.date.slice(0, 10) + "  " + result.date.slice(11, 16)
+    result.source = result.source + "  " + result.date.slice(0, 10) + "  " + result.date.slice(11, 16)
   }
 })
