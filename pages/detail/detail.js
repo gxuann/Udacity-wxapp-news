@@ -24,9 +24,6 @@ Page({
           source: result.source,
           contentList: result.content
         })
-      },
-      complete: () => {
-        wx.stopPullDownRefresh()
       }
     })
   },
