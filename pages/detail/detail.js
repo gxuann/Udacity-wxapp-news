@@ -18,6 +18,9 @@ Page({
         "id": newsID
       },
       success: res=>{
+        wx.showLoading({
+          title: '加载中',
+        });
         let result = res.data.result
         this.addSource(result)
         this.setData({
@@ -26,6 +29,9 @@ Page({
           contentList: result.content,
           count: "阅读 " + result.readCount
         })
+      },
+      complete: ()=>{
+        wx.hideLoading();
       }
     })
   },

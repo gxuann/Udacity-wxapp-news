@@ -20,7 +20,9 @@ Page({
     this.getNewsList();
   },
   onPullDownRefresh() {
-    this.getNewsList();
+    this.getNewsList(()=>{
+      wx.stopPullDownRefresh()
+    });
   },
   //点击新闻类别跳转并获取新闻列表
   selNewsType(e) {
@@ -41,13 +43,17 @@ Page({
     this.getNewsList(); 
   },
   //获取新闻列表
-  getNewsList(){
+  getNewsList(callback){
+    wx.showLoading({
+      title: '加载中',
+    });
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
       data: {
         "type": this.data.selectedNewsType,
       },
       success: res=>{
+        wx.hideLoading();
         let result = res.data.result;
         this.addSource(result);
         var topList = [] , secendList = [];
@@ -61,7 +67,7 @@ Page({
         })
       },
       complete: ()=>{
-        wx.stopPullDownRefresh();
+        callback && callback();
       }
     })
   },
