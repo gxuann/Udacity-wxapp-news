@@ -61,7 +61,7 @@ Page({
         })
       },
       complete: ()=>{
-        wx.stopPullDownRefresh()
+        wx.stopPullDownRefresh();
       }
     })
   },
