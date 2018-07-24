@@ -18,6 +18,14 @@
   line-height: 42rpx;
   opacity: 0.7
 }
+.newsReadCount{
+  position: absolute;
+  top: 120rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  opacity: 0.7;
+  right: 10rpx;
+}
 
 .content{
   position: relative;

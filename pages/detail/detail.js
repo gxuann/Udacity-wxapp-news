@@ -1,7 +1,8 @@
 var newsID 
 Page({
   data:{
-    contentList: []
+    contentList: [],
+    count:""
   },
   onLoad(options){
     newsID = options.newsID
@@ -22,7 +23,8 @@ Page({
         this.setData({
           title: result.title,
           source: result.source,
-          contentList: result.content
+          contentList: result.content,
+          count: "阅读 " + result.readCount
         })
       }
     })

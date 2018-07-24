@@ -1,12 +1,9 @@
 <view class="header">
   <view class="newsTitle">{{title}}</view>
   <view class="newsDate">{{source}}</view>
+  <view class="newsReadCount">{{count}}</view>
 </view>
 
-
-<!-- 
-还没解决段首空两字符的问题，打开了decode属性，nbsp好像不是标准的段首空两字符
--->
 <view class="content" wx:for="{{contentList}}">
   <image class="image" wx:if="{{item.type === 'image'}}" src="{{item.src}}" mode="aspectFill"></image>
   <view class="text">
