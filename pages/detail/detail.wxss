@@ -25,6 +25,9 @@
   margin-left: 20rpx;
   margin-right: 20rpx;
 }
+.text{
+  text-indent: 2em;
+}
 .p{
   font-size: 30rpx;
   line-height: 42rpx;

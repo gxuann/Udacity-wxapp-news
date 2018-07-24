@@ -8,7 +8,9 @@
 还没解决段首空两字符的问题，打开了decode属性，nbsp好像不是标准的段首空两字符
 -->
 <view class="content" wx:for="{{contentList}}">
-  <text class="p" wx:if="{{item.type === 'p'}}" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item.text}}</text>
   <image class="image" wx:if="{{item.type === 'image'}}" src="{{item.src}}" mode="aspectFill"></image>
-  <text class="strong" wx:if="{{item.type === 'strong'}}" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item.text}}</text>
+  <view class="text">
+  <text class="p" wx:if="{{item.type === 'p'}}">{{item.text}}</text>
+  <text class="strong" wx:if="{{item.type === 'strong'}}" decode="{{true}}">{{item.text}}</text>
+  </view>
 </view>
