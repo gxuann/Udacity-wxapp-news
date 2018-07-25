@@ -82,8 +82,8 @@
   top:10rpx;
   right: 5%;
   background-color: red;
-  opacity: 0.4;
-  border-radius: 10rpx
+  opacity: 0.6;
+  border-bottom-left-radius: 10rpx
 }
 .secendNews{
   position: relative;

@@ -30,6 +30,23 @@ Page({
           count: "阅读 " + result.readCount
         })
       },
+      fail: ()=>{
+        this.setData({
+          contentList: [
+            {
+              "type":"image",
+              "src":"/images/404.jpg"
+            },
+            {
+              "type":"strong",
+              "text":"Oops,好像出现了什么问题,请过一会儿再来看看~"
+            }
+          ],
+          title: "新闻页好像丢了~",
+          source: "err",
+          count: "err" 
+        })
+      },
       complete: ()=>{
         wx.hideLoading();
       }

@@ -80,6 +80,12 @@ Page({
   //将新闻来源和时间拼接在一起，通过JavaScript slice方法取出时间和日期
   addSource(result){
     for(var i=0; i<result.length; i++){
+      if(result[i].firstImage == ""){
+        result[i].firstImage = "/images/news-bg.jpg"
+      };
+      if(result[i].source == ""){
+        result[i].source = "来自网络"
+      };
       result[i].source = result[i].source + "  "+ result[i].date.slice(0,10) +"  "+ result[i].date.slice(11,16)
     }
   }
