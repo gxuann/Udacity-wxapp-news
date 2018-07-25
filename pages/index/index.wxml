@@ -5,7 +5,7 @@
     </view>
   </view>
 </scroll-view>
-<view class="newsWrapper">
+<view class="newsWrapper" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
   <view class="topNews">
     <block wx:for="{{topNewsList}}">
       <view class="tapNews" data-id="{{item.id}}" bindtap="tapNews">
