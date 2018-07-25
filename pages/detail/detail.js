@@ -53,6 +53,12 @@ Page({
     })
   },
   addSource(result) {
+    if (result.firstImage == "") {
+      result.firstImage = "/images/news-bg.jpg"
+    };
+    if (result.source == "") {
+      result.source = "来自网络"
+    };
     result.source = result.source + "  " + result.date.slice(0, 10) + "  " + result.date.slice(11, 16)
   }
 })

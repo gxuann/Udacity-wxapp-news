@@ -1,16 +1,18 @@
 let selColor = "#ffffff"
 let unSelColor = "#ced3dc"
+let selLine = "1px solid #fff"
+let unSelLine = ""
 
 Page({
   data: {
     newsTypeList: [
-      {"text": "国内", "tp": "gn", "color":selColor},
-      {"text": "国际", "tp": "gj", "color": unSelColor},
-      { "text": "财经", "tp": "cj", "color": unSelColor},
-      { "text": "娱乐", "tp": "yl", "color": unSelColor},
-      { "text": "军事", "tp": "js", "color": unSelColor},
-      { "text": "体育", "tp": "ty", "color": unSelColor},
-      { "text": "其他", "tp": "other", "color": unSelColor}
+      {"text": "国内", "tp": "gn", "color":selColor, "line":selLine},
+      { "text": "国际", "tp": "gj", "color": unSelColor, "line": unSelLine},
+      { "text": "财经", "tp": "cj", "color": unSelColor, "line": unSelLine},
+      { "text": "娱乐", "tp": "yl", "color": unSelColor, "line": unSelLine},
+      { "text": "军事", "tp": "js", "color": unSelColor, "line": unSelLine},
+      { "text": "体育", "tp": "ty", "color": unSelColor, "line": unSelLine},
+      { "text": "其他", "tp": "other", "color": unSelColor, "line": unSelLine}
     ],
     topNewsList: [],
     secendNewsList: [],
@@ -32,8 +34,10 @@ Page({
     this.data.newsTypeList.forEach(function (value) {
       if (value.tp == e.currentTarget.dataset.tp) {
         value.color = selColor;
+        value.line = selLine;
       } else {
         value.color = unSelColor;
+        value.line = unSelLine;
       }
     });
     this.setData({

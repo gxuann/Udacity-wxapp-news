@@ -1,6 +1,6 @@
 <scroll-view scroll-x class="newsType">
   <view class="newsTypeList">
-    <view class="newsTypeText" wx:for="{{newsTypeList}}" data-tp="{{item.tp}}" style='color:{{item.color}}' bindtap='selNewsType'>
+    <view class="newsTypeText" wx:for="{{newsTypeList}}" data-tp="{{item.tp}}" style='color:{{item.color}};border-bottom:{{item.line}}' bindtap='selNewsType'>
       {{item.text}}
     </view>
   </view>
